@@ -1,0 +1,136 @@
+{
+  "cities": [
+    {
+      "cityName": "Lisbon",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2027-10-31T15:59:59.138Z",
+      "notes": "My favorite city so far!",
+      "position": {
+        "lat": 38.727881642324164,
+        "lng": -9.140900099907554
+      },
+      "id": 73930385
+    },
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Berlin",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-02-12T09:24:11.863Z",
+      "notes": "Amazing 😃",
+      "position": {
+        "lat": 52.53586782505711,
+        "lng": 13.376933665713324
+      },
+      "id": 98443197
+    },
+    {
+      "cityName": "Prague",
+      "country": "Czechia",
+      "emoji": "🇨🇿",
+      "date": "2027-04-18T11:45:30.521Z",
+      "notes": "Beautiful old town square",
+      "position": {
+        "lat": 50.07553814231567,
+        "lng": 14.43780051234567
+      },
+      "id": 55291043
+    },
+    {
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2027-06-05T16:20:15.991Z",
+      "notes": "Best pizza ever 🍕",
+      "position": {
+        "lat": 41.90278359876543,
+        "lng": 12.49636551122334
+      },
+      "id": 36482910
+    },
+    {
+      "cityName": "Amsterdam",
+      "country": "Netherlands",
+      "emoji": "🇳🇱",
+      "date": "2027-12-20T09:10:05.003Z",
+      "notes": "",
+      "position": {
+        "lat": 52.37021578899001,
+        "lng": 4.89516792233445
+      },
+      "id": 82910473
+    },
+    {
+      "cityName": "Barcelona",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-08-22T14:30:00.000Z",
+      "notes": "Sagrada Familia is incredible",
+      "position": {
+        "lat": 41.3850639,
+        "lng": 2.1734035
+      },
+      "id": 45612378
+    },
+    {
+      "cityName": "Florence",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2027-06-10T10:15:45.321Z",
+      "notes": "Renaissance art everywhere 🎨",
+      "position": {
+        "lat": 43.7695604,
+        "lng": 11.2558136
+      },
+      "id": 78945612
+    },
+    {
+      "cityName": "Munich",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2027-03-05T18:45:12.654Z",
+      "notes": "",
+      "position": {
+        "lat": 48.1351253,
+        "lng": 11.5819805
+      },
+      "id": 32165498
+    },
+    {
+      "cityName": "Nairobi",
+      "country": "Kenya",
+      "emoji": "🇰🇪",
+      "date": "2026-03-23T08:52:16.648Z",
+      "notes": "Absolutely Amazing",
+      "position": {
+        "lat": "-1.2832331602903575",
+        "lng": "36.819992065429695"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Naivasha",
+      "country": "Kenya",
+      "emoji": "🇰🇪",
+      "date": "2026-03-25T08:30:14.998Z",
+      "notes": "Super Cpold but the trip was amazing",
+      "position": {
+        "lat": "-0.9806535634480369",
+        "lng": "36.586017608642585"
+      },
+      "id": 98443199
+    }
+  ]
+}
