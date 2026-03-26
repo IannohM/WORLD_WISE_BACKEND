@@ -4,12 +4,13 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 8000;
+
+const PORT = process.env.PORT || 8000;
 
 const DATA_DIR = path.join(__dirname, 'data');
 const DATA_FILE = path.join(DATA_DIR, 'cities.json');
 
-
+// Create data folder and file if they don't exist
 if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
 }
@@ -22,6 +23,15 @@ if (!fs.existsSync(DATA_FILE)) {
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({
+        message: 'WorldWise Backend is running!',
+        status: 'ok',
+        port: PORT,
+    });
+});
+
+// Helper: Read data
 const readData = () => {
     try {
         const fileContent = fs.readFileSync(DATA_FILE, 'utf8');
@@ -32,6 +42,7 @@ const readData = () => {
     }
 };
 
+// Helper: Write data
 const writeData = (data) => {
     try {
         fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
@@ -63,7 +74,7 @@ app.post('/cities', (req, res) => {
     const data = readData();
 
     const newCity = {
-        id: 'c' + Date.now(), // simple unique ID
+        id: 'c' + Date.now(),
         cityName: req.body.cityName,
         country: req.body.country,
         emoji: req.body.emoji,
@@ -76,21 +87,6 @@ app.post('/cities', (req, res) => {
     writeData(data);
 
     res.status(201).json(newCity);
-});
-
-// PATCH / update city
-app.patch('/cities/:id', (req, res) => {
-    const data = readData();
-    const index = data.cities.findIndex((c) => c.id === req.params.id);
-
-    if (index === -1) {
-        return res.status(404).json({ message: 'City not found' });
-    }
-
-    data.cities[index] = { ...data.cities[index], ...req.body };
-    writeData(data);
-
-    res.json(data.cities[index]);
 });
 
 // DELETE city
@@ -109,6 +105,6 @@ app.delete('/cities/:id', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`✅ WorldWise backend is running on http://localhost:${PORT}`);
+    console.log(`✅ WorldWise backend is running on port ${PORT}`);
     console.log(`📁 Data is saved in: ${DATA_FILE}`);
 });
